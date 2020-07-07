@@ -1,3 +1,12 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 /*палитра цветов*/
 :root {
   --primary-font-family: 'Roboto', sans-serif;
@@ -18,8 +27,30 @@ body {
   font-size: 14px;
   color: var(--primary-text-color);
 }
+.container {
+  width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
 /* стилизация для header и footer */
+.site-navig {
+  display: flex;
+}
+.main-navig,
+.navig-list,
+.main-navig-address {
+  display: flex;
+  align-items: center;
+}
+
 .main-navig .logo {
+  display: block;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  margin-right: 85px;
+
   color: #000000;
 }
 
@@ -34,6 +65,10 @@ body {
   color: var(--accent-color);
 }
 .navig.link {
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
   color: var(--title-text-color);
   font-weight: 500;
   line-height: 1.14;
@@ -43,14 +78,28 @@ body {
   color: var(--accent-color);
 }
 
-address .telephone,
-address .mail {
+.main-navig-address .telephone,
+.main-navig-address .mail {
+  display: block;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
   font-style: normal;
   font-weight: 500;
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
 }
+
+.main-navig-address {
+  margin-left: auto;
+}
+
+.navig-item:not(:last-child),
+.main-navig-address .mail {
+  margin-right: 50px;
+}
+
 .navig.link:hover,
 .navig.link:focus,
 address .telephone:hover,
@@ -88,6 +137,8 @@ footer .logo {
 .client-list,
 .social-list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 .link {
   text-decoration: none;
@@ -104,14 +155,17 @@ footer .logo {
   text-transform: uppercase;
 }
 .hero-btn {
+  display: block;
+  padding: 10px 32px 10px 32px;
+  min-width: 200px;
+  border-radius: 4px;
+  border-style: none;
+  text-align: center;
   color: var(--primary-white);
   background-color: var(--accent-color);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
-  display: flex;
-  align-items: center;
-  text-align: center;
   letter-spacing: 0.06em;
 }
 /*секция - Наши преимущества*/
