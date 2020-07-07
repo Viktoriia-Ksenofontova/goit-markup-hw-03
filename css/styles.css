@@ -1,0 +1,200 @@
+/*палитра цветов*/
+:root {
+  --primary-font-family: 'Roboto', sans-serif;
+  --logo-font-family: 'Raleway', sans-serif;
+  --primary-text-color: #757575;
+  --primary-white: #ffffff;
+  --footer-info-text: rgba(255, 255, 255, 0.6);
+  --footer-background-color: #2f303a;
+  --title-text-color: #212121;
+  --accent-color: #2196f3;
+  --filter-background-color: #f5f4fa;
+}
+body {
+  background-color: var(--primary-white);
+  font-family: var(--primary-font-family);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  color: var(--primary-text-color);
+}
+/* стилизация для header и footer */
+.main-navig .logo {
+  color: #000000;
+}
+
+.logo {
+  font-family: var(--logo-font-family);
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+.accent {
+  color: var(--accent-color);
+}
+.navig.link {
+  color: var(--title-text-color);
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.navig-list .current {
+  color: var(--accent-color);
+}
+
+address .telephone,
+address .mail {
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  color: var(--primary-text-color);
+}
+.navig.link:hover,
+.navig.link:focus,
+address .telephone:hover,
+address .mail:hover,
+address .telephone:focus,
+address .mail:focus {
+  color: var(--accent-color);
+}
+footer {
+  background-color: var(--footer-background-color);
+  color: var(--primary-white);
+}
+footer .logo {
+  color: var(--primary-white);
+}
+.contact-info {
+  line-height: 1.71;
+  font-style: normal;
+  letter-spacing: 0.03em;
+}
+.contact-info .link {
+  color: var(--footer-info-text);
+}
+.call-to-action {
+  font-weight: 700;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+/* стилизация основной части index.html*/
+.navig-list,
+.preference-list,
+.services-list,
+.team-list,
+.client-list,
+.social-list {
+  list-style: none;
+}
+.link {
+  text-decoration: none;
+}
+/*секция - Герой*/
+.hero-title {
+  color: var(--primary-white);
+  background-color: rgba(47, 48, 58, 0.8);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.hero-btn {
+  color: var(--primary-white);
+  background-color: var(--accent-color);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+}
+/*секция - Наши преимущества*/
+.preference-subtitle {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--title-text-color);
+}
+.preference-description {
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+/* секция - Наши услуги, Наша команда, Постоянные клиенты*/
+.services-title,
+.team-title,
+.client-title {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+}
+.services-text {
+  line-height: 1.14;
+  text-align: center;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-white);
+  background-color: rgba(47, 48, 58, 0.8);
+}
+.team-subtitle {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+}
+.team-position {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+/* стилизация основной части portfolio.html*/
+.filter,
+.works-examples {
+  list-style: none;
+}
+.filter-btn {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--title-text-color);
+  background-color: var(--filter-background-color);
+}
+.filter-btn.active {
+  color: var(--primary-white);
+  background-color: var(--accent-color);
+}
+.works-examples-subtitle {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  color: var(--title-text-color);
+}
+.description-filter {
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.03em;
+  color: var(--primary-text-color);
+}
+.works-examples-description {
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--primary-white);
+  background-color: rgba(33, 150, 243, 0.9);
+}
