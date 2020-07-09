@@ -34,12 +34,33 @@ body {
   margin-right: auto;
   margin-left: auto;
 }
-/* стилизация для header и footer */
-.site-navig {
-  display: flex;
-}
-.main-navig,
 .navig-list,
+.preference-list,
+.services-list,
+.team-list,
+.client-list,
+.social-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.link {
+  text-decoration: none;
+}
+
+h2,
+h3 {
+  margin: 0;
+}
+img {
+  display: block;
+}
+
+/* стилизация для header и footer */
+.site-navig .container,
+.main-navig,
 .main-navig-address {
   display: flex;
   align-items: center;
@@ -66,8 +87,8 @@ body {
 }
 .navig.link {
   display: block;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 
   color: var(--title-text-color);
   font-weight: 500;
@@ -81,8 +102,8 @@ body {
 .main-navig-address .telephone,
 .main-navig-address .mail {
   display: block;
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 
   font-style: normal;
   font-weight: 500;
@@ -112,10 +133,28 @@ footer {
   background-color: var(--footer-background-color);
   color: var(--primary-white);
 }
+footer .container {
+  display: flex;
+}
+.footer-left {
+  margin-top: 60px;
+  margin-right: 69px;
+  margin-bottom: 60px;
+
+  width: 231px;
+}
+.footer-center {
+  margin-top: 72px;
+  width: 206px;
+}
 footer .logo {
+  display: block;
+  margin-bottom: 20px;
+
   color: var(--primary-white);
 }
 .contact-info {
+  display: block;
   line-height: 1.71;
   font-style: normal;
   letter-spacing: 0.03em;
@@ -123,28 +162,38 @@ footer .logo {
 .contact-info .link {
   color: var(--footer-info-text);
 }
+.contact-info-mail {
+  margin-top: 9px;
+  margin-bottom: 9px;
+}
 .call-to-action {
+  margin-bottom: 20px;
+
   font-weight: 700;
   line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
+.footer-center .social-list {
+  justify-content: space-between;
+}
+.footer-center .social-list-item.link {
+  display: block;
+  color: var(--primary-white);
+}
 /* стилизация основной части index.html*/
-.navig-list,
-.preference-list,
-.services-list,
-.team-list,
-.client-list,
-.social-list {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-.link {
-  text-decoration: none;
-}
+
 /*секция - Герой*/
+.hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
 .hero-title {
+  margin-top: 0;
+  margin-left: 0;
+  margin-right: 0;
+  margin-bottom: 30px;
+
   color: var(--primary-white);
   background-color: rgba(47, 48, 58, 0.8);
   font-weight: 900;
@@ -156,10 +205,16 @@ footer .logo {
 }
 .hero-btn {
   display: block;
-  padding: 10px 32px 10px 32px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  padding-right: 32px;
+  padding-bottom: 10px;
+  padding-left: 32px;
+
   min-width: 200px;
   border-radius: 4px;
-  border-style: none;
+  border: none;
   text-align: center;
   color: var(--primary-white);
   background-color: var(--accent-color);
@@ -169,7 +224,28 @@ footer .logo {
   letter-spacing: 0.06em;
 }
 /*секция - Наши преимущества*/
+.preference {
+  padding-top: 94px;
+  padding-bottom: 47px;
+}
+.preference-item {
+  flex-basis: 270px;
+}
+.preference-item:not(:last-child),
+.services-item:not(:last-child),
+.team-item:not(:last-child) {
+  margin-right: 30px;
+}
+.preference-item img {
+  margig-top: 25px;
+  margin-bottom: 25px;
+  margin-left: auto;
+  margin-right: auto;
+}
 .preference-subtitle {
+  margin-top: 30px;
+  margin-bottom: 10px;
+
   font-weight: 700;
   font-size: 14px;
   line-height: 1.14;
@@ -182,9 +258,15 @@ footer .logo {
   letter-spacing: 0.03em;
 }
 /* секция - Наши услуги, Наша команда, Постоянные клиенты*/
+.services {
+  padding-top: 47px;
+  padding-bottom: 94px;
+}
 .services-title,
 .team-title,
 .client-title {
+  margin-bottom: 50px;
+
   font-weight: 700;
   font-size: 36px;
   line-height: 1.17;
@@ -193,6 +275,11 @@ footer .logo {
   color: var(--title-text-color);
 }
 .services-text {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 27px;
+  padding-bottom: 27px;
+
   line-height: 1.14;
   text-align: center;
   letter-spacing: 0.03em;
@@ -200,7 +287,17 @@ footer .logo {
   color: var(--primary-white);
   background-color: rgba(47, 48, 58, 0.8);
 }
+.team {
+  padding-top: 94px;
+  padding-bottom: 94px;
+  background-color: #f5f4fa;
+}
+.team-item > img {
+  margin-bottom: 30px;
+}
 .team-subtitle {
+  margin-bottom: 10px;
+
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -209,11 +306,30 @@ footer .logo {
   color: var(--title-text-color);
 }
 .team-position {
+  margin-top: 0;
+  margin-bottom: 16px;
+
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
   letter-spacing: 0.03em;
 }
+.team-item .social-list {
+  margin-bottom: 24px;
+  justify-content: space-around;
+}
+
+.clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.client-list {
+  justify-content: space-between;
+}
+.client-list-item {
+  align-items: center;
+}
+
 /* стилизация основной части portfolio.html*/
 .filter,
 .works-examples {
