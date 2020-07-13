@@ -233,7 +233,7 @@ footer .logo {
   padding-bottom: 47px;
 }
 .preference-item {
-  flex-basis: 270px;
+  min-width: 270px;
 }
 .preference-item:not(:last-child),
 .services-item:not(:last-child),
@@ -241,13 +241,13 @@ footer .logo {
   margin-right: 30px;
 }
 .preference-item img {
-  margig-top: 25px;
-  margin-bottom: 25px;
+  margin-bottom: 30px;
   margin-left: auto;
   margin-right: auto;
+  padding-top: 25px;
+  padding-bottom: 25px;
 }
 .preference-subtitle {
-  margin-top: 30px;
   margin-bottom: 10px;
 
   font-weight: 700;
@@ -258,6 +258,7 @@ footer .logo {
   color: var(--title-text-color);
 }
 .preference-description {
+  margin: 0;
   line-height: 1.71;
   letter-spacing: 0.03em;
 }
